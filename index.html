@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./src/image/favicon.png" type="image/png">
+    <title>Honkai: Star Rail - Home</title>
+</head>
+<body>
+    <div class="layer image-layer">
+        <video autoplay loop muted id="myVideo">
+        <source src="./src/video/animated-short-a-flash-honkai-star-rail (online-video-cutter.com).mp4" type="video/mp4">
+        Your browser does not support HTML5 video.</video>
+    </div>
+    <div class="layer blur-layer"></div>
+    <div class="layer text-layer">
+        <div class="sp-nav">
+            <img class="pic1" src="./src/image/logo-light.3def3bc.png">
+            <img class="pic2" src="./src/image/Honkai_Star_Rail_logo1.png">
+            <div class="user-apply">
+                <button id="btn-signin" onclick="buttonSignInClick()">Sign in</button>
+                <button id="btn-signup" onclick="buttonSignUpClick()">Sign up</button>
+                <div id="overlay" onclick="exitTabLayout('popup-container','second-popup')"></div>
+            </div>
+        </div>
+        <div class="main-info">
+            <h1>Dear Trailblazer,</h1>
+            <h2>Are you ready to embark on this epic adventure?</h2>
+            <button class="onhover-btn" role="button">Unleash the inconceivable power, conquer the unknown, flight with the stars, and let your legacy illuminate the cosmos.</button>
+            <button id="register-btn" onclick="buttonSignUpClick()"><span class="text-display">START YOUR JOURNEY&nbsp;&nbsp;<i class="fas fa-arrow-right"></i></span></button>
+            <div class="general">
+                <button id="btn-clear" onclick="makeClear()"><i class="fas fa-strikethrough"></i></button>
+                <button id="btn-sound" onclick="muteOrNot()"><i class="fas fa-volume-up"></i></button>
+                <button id="btn-play" onclick="pausePlay()"><i class="fas fa-play"></i></button>
+            </div>
+        </div>
+        <div class="footer">
+            <div onclick="introButton()"><img src="./src/image/download.png" class="arrow"></div>
+        </div>
+        <div class="second-popup">
+            <button id="cross-icon" onclick="exitTab('second-popup')" class="out-intro"><i class="fas fa-times"></i></button>
+            <h2>Dear Visitor,</h2>
+            <p>As the webpage's creator, I sincerely thank you for visiting my website. Rest assured, the data on this webpage is solely for sampling purposes and won't leave your local storage. This website is inspired by the game Honkai: Star Rail from the Hoyoverse. For more game information, please visit the official developer's website. Thank you once again for accepting my project.</p>
+        </div>
+        <div class="popup-container">
+            <button id="cross-icon" onclick="exitTab('popup-container')"><i class="fas fa-times"></i></button>
+            <img src="./src/image/Honkai_Star_Rail_logo12.png">
+            <div class="popup-content">
+                <button class="openTab-btn" onclick="chooseMyTab(event, 'signin')" id="btn-1">Sign In</button>
+                <button class="openTab-btn" onclick="chooseMyTab(event,'signup')" id="btn-2">Sign Up</button>
+            </div>
+            <div id="signin" class="openTab">
+                <h2>Welcome back, Trailblazer!</h2>
+                <form class="form-user" id="signinForm">
+                    <input type="text" placeholder="Email" id="emailSignin">
+                    <span id="signinEmailError" class="error-message"></span>
+                    <input type="password" placeholder="Password" id="passSignin">
+                    <span id="signinPassError" class="error-message"></span>
+                    <button class="sendTo-btn" type="submit" id="sendTo-alpha">Into the Universe!</button>
+                  </form>
+                  
+            </div>
+            <div id="signup" class="openTab">
+                <h2>Welcome, Trailblazer!</h2>
+                <form class="form-user" id="signupForm">
+                    <input type="text" placeholder="Email" id="emailSignup">
+                    <span id="signupEmailError" class="error-message"></span>
+                    <input type="text" placeholder="Username" id="nameSignup">
+                    <span id="signupNameError" class="error-message"></span>
+                    <input type="password" placeholder="Password" id="passSignup">
+                    <span id="signupPassError" class="error-message"></span>
+                    <button class="sendTo-btn" type="submit" id="sendTo-beta">Let's begin the journey!</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+   
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+    
+    <script src="main.js"></script>      
+</body>
+</html>

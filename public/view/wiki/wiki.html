@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./wiki.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="../../../src/image/favicon.png" type="image/png">
+    <title>Honkai: Star Rail - Wiki</title>
+</head>
+<body>
+    <div class="user-nav">
+        <img src="../../../src/image/logo-light.3def3bc.png" alt="">
+        <div class="community"><a href="/public/view/thankyou/tks.html">COMMUNITY</a></div>
+        <div class="user-content" id="userContent"  onclick="openSetting('popupUserSet')">
+            <div id="user-pic"><img src="../../../src/image/iconClara.png"></div>
+            <div class="show-icon"><i class="fas fa-cog"></i></div>
+        </div>
+    </div>
+
+    <div class="big-content">
+        <div class="charnav-content">
+            <button id="resetDisplay"><i class="fas fa-sync"></i></button>
+            <nav class="char-navbar">
+                <ul class="char-list" id="char-list">
+                </ul>
+            </nav>
+        </div>
+        <div class="char-content">
+            <div class="type-nav" id="typeNav">
+                <button class="type-btn" value="physical"><img src="../../../src/image/Star_Rail_Element_Physical.png"></button>
+                <button class="type-btn" value="fire"><img src="../../../src/image/Element_Fire.png"></button>
+                <button class="type-btn" value="ice"><img src="../../../src/image/Element_Ice.png"></button>
+                <button class="type-btn" value="lightning"><img src="../../../src/image/Star_Rail_Element_Lightning.png"></button>
+                <button class="type-btn" value="wind"><img src="../../../src/image/Element_Wind.png"></button>
+                <button class="type-btn" value="quantum"><img src="../../../src/image/Star_Rail_Element_Quantum.png"></button>
+                <button class="type-btn" value="imaginary"><img src="../../../src/image/Star_Rail_Element_Imaginary.png"></button>
+            </div>
+            <div class="char-display">
+                <div id="char-model">
+                    <img src="../../../src/image/char-banner/clara-banner.png">
+                </div>
+            </div>
+        </div>
+        <div class="left-nav">
+            <div class="char-intro">
+                <div id="char-pic">
+                    <img src="../../../src/image/char-face/clara (1).png" alt="">
+                </div>
+                <div class="char-name">
+                    <div id="real-name"><h4>Clara</h4></div>
+                    <div id="nick-name"><h4>Bloody Rabbit</h4></div>
+                </div>
+            </div>
+            <div class="star-rail-line"></div>
+            <div class="first-content">
+                <div id="char-fate" class="s1-class">
+                    <img src="../../../src/image/char-fate/huy-diet.png">
+                </div>
+                <div id="char-sound" class="s1-class">
+                    <button id="soundtrackPlayer"><i class="fas fa-microphone"></i></button>
+                    <audio id="charSoundtrack" src="../../../src/soundtrack/VO_JA_Archive_Clara_1_M.ogg"></audio>
+                </div>
+                <div id="char-star" class="s1-class">
+                    <img src="../../../src/image/bg-5-sao.png" alt="">
+                </div>
+            </div>
+            <div class="s1-line"><div class="insideLine"></div></div>
+            <div class="second-content">
+                <div class="story-content" id="storyContent">
+                    <p id="char-story">A young girl raised by a robot, her perceptiveness
+                    are far beyond her years.
+                    For Clara, Svarog's logical calculations are law and infallible. i
+                    That is, until she realized that the results from “calculations” don't
+                    always necessarily bring joy to everyone.
+                    The once shy little girl then decided to cast aside her timidness.</p>
+                </div>
+            </div>
+            <div class="s1-line1"><div class="insideLine1"></div></div>
+            <div class="third-content">
+                <div class="big-label">
+                    <div class="small-label">
+                        <span class="label-only">HP</span>
+                    </div>
+                    <div class="small-label">
+                        <span class="label-only">DEF</span>
+                    </div>
+                    <div class="small-label">
+                        <span class="label-only">ATK</span>
+                    </div>
+                    <div class="small-label">
+                        <span class="label-only">SPD</span>
+                    </div>
+                    <div class="small-label">
+                        <span class="label-only">TNT</span>
+                    </div>
+                </div>
+                <div class="big-value">
+                    <div class="small-label">
+                        <span id="hp-value">1241</span>
+                    </div>
+                    <div class="small-label">
+                        <spanv id="def-value">485</spanv>
+                    </div>
+                    <div class="small-label">
+                        <span id="atk-value">737</span>
+                    </div>
+                    <div class="small-label">
+                        <span id="spd-value">90</span>
+                    </div>
+                    <div class="small-label">
+                        <span id="tnt-value">125</span>
+                    </div>
+                </div>
+                <div class="fillbar-content">
+                    <div class="fill-bar">
+                        <div class="fill-me" id="hp-fill"></div>
+                    </div>
+                    <div class="fill-bar">
+                        <div class="fill-me" id="def-fill"></div>
+                    </div>
+                    <div class="fill-bar">
+                        <div class="fill-me" id="atk-fill"></div>
+                    </div>
+                    <div class="fill-bar">
+                        <div class="fill-me" id="spd-fill"></div>
+                    </div>
+                    <div class="fill-bar">
+                        <div class="fill-me" id="tnt-fill"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popupUserSet">
+        <div class="exitSet" onclick="exitTab('popupUserSet')"><i class="fas fa-times"></i></div>
+        <div id="avtIcon"><img src="../../../src/image/iconClara.png"></div>
+        <button id="logOutBtn" class="logoutBtn">Log out</button>
+        <div class="editLayer">Edit your image</div>
+        <form class="form-user" id="updateForm">
+            <span class="error-message" id="generalErr"></span>
+            <span class="displayS1">Username</span>
+            <input id="updateName" type="text" placeholder="">
+            <span class="error-message" id="nameErr"></span>
+            <span class="displayS1">Email</span>
+            <input id="updateEmail" type="text" placeholder="">
+            <span class="error-message" id="emailErr"></span>
+            <span class="displayS1">Password</span>
+            <input id="updatePassword" type="password" placeholder="">
+            <span class="error-message" id="passErr"></span>
+            <div class="s1-container">
+                <button type="submit" id="makeChangeBtn">Apply</button>
+            </div>
+        </form>
+        <!-- <form class="form-user" id="checkForm">
+            <span class="error-message" id="MainErr">Please enter your old email</span>
+            <span class="displayS1">Email</span>
+            <input id="updateNow" type="text" placeholder="">
+        </form> -->
+    </div>
+    <div id="overlay"></div>
+    <script src="wiki.js"></script>
+</body>
+</html>
